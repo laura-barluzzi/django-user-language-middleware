@@ -1,6 +1,10 @@
 from django.test import SimpleTestCase
-from unittest.mock import Mock
-from unittest.mock import patch
+try:
+    from unittest.mock import Mock
+    from unittest.mock import patch
+except ImportError:
+    from mock import Mock
+    from mock import patch
 
 from user_language_middleware import middleware
 
