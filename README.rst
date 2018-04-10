@@ -26,7 +26,7 @@ Add a language field to your user model:
                                     choices=settings.LANGUAGES,
                                     default=settings.LANGUAGE_CODE)
 
-Install the middleware from **pip**:
+Install the middleware from pip:
 
 .. code-block:: sh
 
@@ -46,9 +46,11 @@ Supported versions
 ==================
 
 Python:
+
 - 2.7
 - 3.4 to 3.6
 
 Django:
+
 - 1.8 to 1.11
 - 2.0
