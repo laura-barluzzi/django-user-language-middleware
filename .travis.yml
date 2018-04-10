@@ -1,0 +1,13 @@
+language: python
+
+env:
+  - DJANGO_VERSION=1.10.7
+
+python:
+  - 3.6
+
+install:
+  - pip install Django==${DJANGO_VERSION}
+
+script:
+  - ./manage.py test
