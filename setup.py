@@ -9,9 +9,13 @@ with open('README.rst') as fobj:
     long_description = fobj.read()
 
 
+with open('version.txt') as fobj:
+    version = fobj.read()
+
+
 setup(
     name='django-user-language-middleware',
-    version='0.0.1',
+    version=version,
     author='Laura Barluzzi',
     author_email='laura@koalacoder.com',
     packages=find_packages(exclude=['tests']),
