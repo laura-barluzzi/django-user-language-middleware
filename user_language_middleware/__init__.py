@@ -1,1 +1,1 @@
-from .middleware import UserLanguageMiddleware
+from .middleware import UserLanguageMiddleware  # noqa: F401
