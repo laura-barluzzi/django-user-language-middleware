@@ -4,6 +4,8 @@ User Language Middleware
 
 .. image:: https://travis-ci.org/laura-barluzzi/django-user-language-middleware.svg?branch=master
     :target: https://travis-ci.org/laura-barluzzi/django-user-language-middleware
+.. image:: https://img.shields.io/pypi/v/django-user-language-middleware.svg
+    :target: https://pypi.python.org/pypi/django-user-language-middleware/
 
 What's this?
 ============
