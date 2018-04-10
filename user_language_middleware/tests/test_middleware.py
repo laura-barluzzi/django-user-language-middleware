@@ -1,9 +1,10 @@
-from django.test import TestCase
+from django.test import SimpleTestCase
 from unittest.mock import patch, Mock
 from user_language_middleware import middleware
 
 
-class UserLanguageMiddlewareTest(TestCase):
+class UserLanguageMiddlewareTest(SimpleTestCase):
+
     def setUp(self):
         self.mock_request = Mock()
         self.mock_response = Mock()
