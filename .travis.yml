@@ -19,6 +19,8 @@ matrix:
 install:
   - pip install Django==${DJANGO_VERSION}
   - if [[ $TRAVIS_PYTHON_VERSION == 2.* ]]; then pip install mock; fi
+  - pip install flake8
 
 script:
   - ./manage.py test
+  - flake8 user_language_middleware tests
