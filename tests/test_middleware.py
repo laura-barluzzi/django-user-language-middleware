@@ -7,6 +7,7 @@ except ImportError:
 
 from django.test import SimpleTestCase
 
+from user_language_middleware import UserLanguageMiddleware
 from user_language_middleware import middleware
 
 
@@ -16,7 +17,7 @@ class UserLanguageMiddlewareTest(SimpleTestCase):
         self.mock_response = Mock()
         self.LANGUAGE_SESSION_KEY = ''
         self.mock_request.session = {self.LANGUAGE_SESSION_KEY: ''}
-        self.ulm = middleware.UserLanguageMiddleware()
+        self.ulm = UserLanguageMiddleware()
 
     @patch.object(middleware, 'translation')
     def test_process_response_user_not_authenticated(self, mock_translation):
