@@ -1,7 +1,27 @@
+import django
 from django.utils import translation
 
 
-class UserLanguageMiddleware(object):
+def is_django_greater_than_1_10():
+    main_version = django.VERSION[0]
+    if main_version > 1:
+        return True
+
+    sub_version = django.VERSION[1]
+    if main_version == 1 and sub_version >= 10:
+        return True
+
+    return False
+
+
+if is_django_greater_than_1_10():
+    from django.utils.deprecation import MiddlewareMixin
+    superclass = MiddlewareMixin
+else:
+    superclass = object
+
+
+class UserLanguageMiddleware(superclass):
     def process_response(self, request, response):
         user = getattr(request, 'user', None)
         if not user:
