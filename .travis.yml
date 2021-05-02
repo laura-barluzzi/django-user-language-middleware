@@ -1,6 +1,7 @@
 language: python
 
 env:
+  - DJANGO_VERSION=3.2
   - DJANGO_VERSION=2.1
   - DJANGO_VERSION=2.0
   - DJANGO_VERSION=1.11
@@ -21,6 +22,8 @@ matrix:
     - env: DJANGO_VERSION=2.1
       python: 2.7
     - env: DJANGO_VERSION=2.1
+      python: 3.4
+    - env: DJANGO_VERSION=3.2
       python: 3.4
 
 install:
